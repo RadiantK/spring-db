@@ -21,7 +21,7 @@ public class MemberRepositoryV0 {
 
         try {
             con = getConnection();
-            pstmt = con.prepareCall(sql);
+            pstmt = con.prepareStatement(sql);
             pstmt.setString(1, member.getMemberId());
             pstmt.setInt(2, member.getMoney());
             pstmt.execute();
