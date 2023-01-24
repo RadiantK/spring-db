@@ -35,7 +35,7 @@ public class TxLevelTest {
     @Transactional(readOnly = true) // 읽기전용, 트랜잭션은 원래 읽기,쓰기 둘다 가능
     static class LevelService {
 
-        @Transactional(readOnly = false) // default = true
+        @Transactional(readOnly = false)
         public void write() {
             log.info("call write");
             printTxInfo();
